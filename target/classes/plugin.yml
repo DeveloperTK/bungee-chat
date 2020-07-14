@@ -1,4 +1,4 @@
-name: TestPlugin
+name: BungeeChat
 main: org.foxat.bungeechat.BungeeChat
 version: "1.0"
 author: DevTK

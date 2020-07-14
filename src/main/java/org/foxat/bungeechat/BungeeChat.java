@@ -23,7 +23,14 @@ public class BungeeChat extends Plugin implements Listener {
 
     @EventHandler
     public void onChat(ChatEvent e) {
-        e.setCancelled(true);
+        if(e.getMessage().startsWith("/")) {
+            return;
+        } else if(e.getMessage().startsWith("!")) {
+            e.setCancelled(false);
+            return;
+        } else {
+            e.setCancelled(true);
+        }
 
         TextComponent component = new TextComponent();
         String message = e.getMessage();
